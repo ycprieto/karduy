@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Karduy — Catálogo de Productos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fuentes -->
+  <link rel="icon" type="image/png" href="assets/img/karduy.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="header">
+  <!--<div class="container header__content">-->
+  <div class="logo-badge clickable-contact">
+  <img src="assets/img/logo.png" class="logo">
+</div>
+    <p class="tagline">Productos naturales y artesanales</p>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="container nav__menu">
+    <a href="#about">Nosotros</a>
+    <a href="#productos">Productos</a>
+  </div>
+</nav>
+
+<main>
+  <!-- SOBRE NOSOTROS-->
+<section id="about" class="about-bg-split">
+  <div class="container">
+    <div class="about__grid">
+      
+      <div class="about__content">
+        <h2>Nuestra Historia</h2>
+        <div class="about__text">
+          <p>
+            <strong>KARDUY</strong> nace del amor por la tierra, la tradición familiar y la convicción de que la verdadera sanación es natural. Nuestro lema, <strong>“Sanando desde la raíz”</strong>, es el corazón de todo lo que hacemos: un compromiso con el bienestar integral a través de tesoros que la naturaleza nos brinda.
+          </p>
+          <p>
+            Nuestra historia tiene un aroma especial a <strong>Cacao</strong>, nuestro producto insignia. Este tesoro se cultiva con respeto y tradición en el municipio de <strong>San Pablo de Borbur, Boyacá</strong>, directamente en la finca de nuestros abuelos. Es allí donde nuestras raíces cobran vida, transformando la herencia familiar en un propósito que llega a tu mesa.
+          </p>
+          <p>
+            Complementamos nuestra oferta con lo mejor de nuestra geografía: <strong>café 100% colombiano</strong> de Acevedo, Huila, y productos llenos de energía vital como el <strong>polen, la miel y el maní</strong> de tierras boyacenses. Además, extendemos nuestro cuidado al hogar con nuestra línea artesanal de <strong>velas y jabones</strong>.
+          </p>
+          <p>
+            Desde <strong>Guatavita</strong>, transformamos y empacamos cada producto cuidando cada detalle para conservar sus propiedades naturales. En KARDUY, compartimos una expresión de respeto por la naturaleza y un compromiso con una vida más consciente.
+          </p>
+        </div>
+      </div>
+
+      <div class="about__image-container">
+        <img src="assets/img/productos.png" alt="Productos Karduy">
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- PRODUCTOS -->
+<section id="productos" class="section">
+  <div class="container">
+    <h2 class="section__title">Nuestros Productos</h2>
+    <div class="products-grid" id="gridProductos">
+      <article class="card">
+        <img src="assets/img/cacao.jpg" alt="Cacao">
+        <div class="card__body">
+          <span class="badge">Cacao</span>
+          <h3>Cacao Artesanal</h3>
+          <p>El corazón de nuestra historia familiar.</p>
+          <button class="btn btn-consultar" 
+            data-producto="Cacao Artesanal" 
+            data-origen="Finca de nuestros abuelos en San Pablo de Borbur, Boyacá."
+            data-beneficios="Rico en antioxidantes, mejora el estado de ánimo y aporta energía saludable.">
+            Conocer más
+          </button>
+        </div>
+      </article>
+      <article class="card">
+        <img src="assets/img/cafe.png" alt="Café">
+        <div class="card__body">
+          <span class="badge">Café</span>
+          <h3>Café 100% Colombiano</h3>
+          <p>Aroma y tradición en cada taza.</p>
+          <button class="btn btn-consultar" 
+            data-producto="Café 100% Colombiano" 
+            data-origen="Acevedo, Huila (Región de alta calidad cafetera)."
+            data-beneficios="Aroma intenso, cuerpo balanceado y energía natural para tu día.">
+            Conocer más
+          </button>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/img/miel.png" alt="Miel">
+        <div class="card__body">
+          <span class="badge">Miel</span>
+          <h3>Miel Natural</h3>
+          <p>Dulzura pura de las montañas.</p>
+          <button class="btn btn-consultar" 
+            data-producto="Miel Natural" 
+            data-origen="Tierras boyacenses."
+            data-beneficios="Endulzante natural, fortalece el sistema inmune y tiene propiedades antibacteriales.">
+            Conocer más
+          </button>
+        </div>
+      </article>
+
+      <article class="card extra-product">
+        <img src="assets/img/polen.png" alt="Polen">
+        <div class="card__body">
+          <span class="badge">Súper Alimento</span>
+          <h3>Polen Natural</h3>
+          <p>Multivitamínico natural para tu bienestar.</p>
+          <button class="btn btn-consultar" 
+            data-producto="Polen Natural" 
+            data-origen="Tierras boyacenses."
+            data-beneficios="Aumenta la resistencia física, reduce la fatiga y refuerza las defensas naturales.">
+            Conocer más
+          </button>
+        </div>
+      </article>
+
+      <article class="card extra-product">
+        <img src="assets/img/jabones.png" alt="Jabones">
+        <div class="card__body">
+          <span class="badge">Cuidado Corporal</span>
+          <h3>Jabones Artesanales</h3>
+          <p>Cuidado consciente para tu piel.</p>
+          <button class="btn btn-consultar" 
+            data-producto="Jabones Artesanales" 
+            data-origen="Fabricados artesanalmente en Guatavita."
+            data-beneficios="Elaborados con plantas botánicas de la región como romero y caléndula para una limpieza suave.">
+            Conocer más
+          </button>
+        </div>
+      </article>
+
+      <article class="card extra-product">
+        <img src="assets/img/mani.png" alt="Maní">
+        <div class="card__body">
+          <span class="badge">Snack Saludable</span>
+          <h3>Maní Natural</h3>
+          <p>Energía pura y crocante.</p>
+          <button class="btn btn-consultar" 
+            data-producto="Maní Natural" 
+            data-origen="Tierras boyacenses."
+            data-beneficios="Fuente de proteína y grasas saludables, ideal para acompañar tus mejores momentos.">
+            Conocer más
+          </button>
+        </div>
+      </article>
+
+      <article class="card extra-product">
+        <img src="assets/img/velas.png" alt="Velas">
+        <div class="card__body">
+          <span class="badge">Ambiente</span>
+          <h3>Velas Artesanales</h3>
+          <p>Luz y aromas naturales para tu hogar.</p>
+          <button class="btn btn-consultar" 
+            data-producto="Velas Artesanales" 
+            data-origen="Fabricadas artesanalmente en Guatavita."
+            data-beneficios="Aromas relajantes que transforman tus espacios y conectan con la tranquilidad de la naturaleza.">
+            Conocer más
+          </button>
+        </div>
+      </article>
+
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <button id="btnVerMas" class="btn btn-outline">Conocer más productos</button>
+    </div>
+  </div>
+</section>
+
+  <!-- CONTACTO (disparador de modal) -->
+  <section id="contacto" class="section section--accent">
+    <div class="container contact">
+      <h2>Contáctanos</h2>
+      <button class="btn btn-light contact-trigger">Ver opciones de contacto</button>
+    </div>
+  </section>
+
+</main>
+
+<!-- BOTÓN WHATSAPP FLOTANTE -->
+
+<a href="https://wa.me/573222188846" target="_blank" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 30px;">
+</a>
+<!-- MODAL CONTACTO -->
+<div id="contactModal" class="modal">
+  <div class="modal__content">
+    <button class="modal__close" id="modalClose">✕</button>
+
+    <h3 class="modal__title">✨ Karduy – Sabor natural que se siente ✨</h3>
+
+    <p>Disfruta productos naturales y de alta calidad:</p>
+    <ul class="modal__list">
+      <li>☕ Café en grano y molido</li>
+      <li>🥜 Maní 100% orgánico</li>
+      <li>🍯 Maní dulce con panela</li>
+      <li>🍫 Cacao en grano y en polvo</li>
+    </ul>
+
+    <p>
+      Perfectos para acompañar tus momentos, cuidar tu cuerpo y consentir tu paladar 🌱
+    </p>
+
+    <p><strong>📩 Escríbenos para precios y pedidos</strong></p>
+
+    <div class="modal__actions">
+      <a href="https://wa.me/573222188846" target="_blank" class="btn btn-outline">WhatsApp</a>
+      <a href="https://instagram.com/Karduy.coffe" target="_blank" class="btn btn-outline">Instagram</a>
+      <a href="mailto:karduy.coffee@gmail.com" class="btn btn-outline">Correo</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    © 2026 Karduy — Productos naturales
+    <P>GUATAVITA-COLOMBIA</P>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
