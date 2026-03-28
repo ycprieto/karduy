@@ -1,0 +1,333 @@
+:root {
+  --font-base: 'Poppins', sans-serif;
+  --font-title: 'Playfair Display', serif;
+  --verde: #2f6b4f;
+  --verde-oscuro: #214233;
+  --beige: #f7f0e7;
+}
+
+/* 1. RESET & BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--beige);
+  color: #2b2b2b;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+  letter-spacing: .5px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* 2. HEADER & NAV */
+.header {
+  background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("../img/guatavita.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.logo-badge {
+  display: inline-block;
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: 800px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.18);
+  border: 2px solid rgba(255,255,255,.7);
+  cursor: pointer;
+}
+
+.logo {
+  width: clamp(140px, 18vw, 220px);
+  height: auto;
+  display: block;
+  transition: .25s ease;
+}
+
+.logo:hover { transform: translateY(-2px) scale(1.03); }
+
+.tagline {
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.nav {
+  background: var(--verde-oscuro);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 14px 0;
+}
+
+.nav a { color: white; font-weight: 500; font-size: 15px; }
+.nav a:hover { text-decoration: underline; }
+
+/* 3. SECCIÓN NUESTRA HISTORIA (SPLIT) */
+.about-bg-split {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../img/nosotros.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 100px 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about__content {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.about__content h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.about__text p {
+  margin-bottom: 18px;
+  font-size: 16px;
+  text-align: justify;
+  color: #f1f1f1;
+}
+
+.about__image-container img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* 4. PRODUCTOS */
+.section { padding: 60px 0; }
+
+.section__title {
+  text-align: center;
+  color: var(--verde);
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover { transform: translateY(-6px); }
+
+.card img { width: 100%; height: 300px; object-fit: cover; }
+
+.card__body { padding: 18px; }
+
+.badge {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(47, 107, 79, 0.12);
+  color: var(--verde-oscuro);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* 5. BOTONES */
+.btn {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: var(--verde);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn:hover { background: var(--verde-oscuro); }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--verde);
+  color: var(--verde);
+  padding: 12px 24px;
+}
+
+.btn-light { background: white; color: var(--verde); }
+
+/* 6. MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+.modal.active { display: flex; }
+
+.modal__content {
+  background-color: white;
+  max-width: 520px;
+  width: 100%;
+  border-radius: 18px;
+  padding: 28px;
+  position: relative;
+  animation: modalIn .25s ease;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease;
+}
+
+@keyframes modalIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal__title { margin-bottom: 12px; }
+
+.modal__list { margin: 10px 0 16px 18px; }
+
+.modal__list li { 
+  margin-bottom: 12px; 
+  font-size: 15px; 
+  text-shadow: 0 1px 1px rgba(255,255,255,0.5); 
+}
+
+.modal__actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* 7. ELEMENTOS FLOTANTES & FOOTER */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover { transform: scale(1.1); }
+
+.footer {
+  background: #183020;
+  color: #dfe8e2;
+  text-align: center;
+  padding: 30px;
+  font-size: 13px;
+}
+.section--accent {
+  background: var(--verde); /* El verde oscuro de tu marca */
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.section--accent .section__title {
+  color: #ffffff; /* Título en blanco para que resalte */
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Ajuste específico para el botón dentro de esta sección */
+.section--accent .btn-light {
+  background: white;
+  color: var(--verde);
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.section--accent .btn-light:hover {
+  transform: translateY(-3px);
+  background: var(--beige);
+}
+
+/* 8. RESPONSIVE */
+@media (min-width: 992px) {
+  .about__grid {
+    grid-template-columns: 1.5fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .about__content { margin: 0 10px; padding: 25px; }
+  .about__image-container { margin-top: 30px; }
+}
+
+/* 9. UTILIDADES JS */
+.extra-product { display: none; opacity: 0; transition: 0.5s; }
+.extra-product.show { display: flex; opacity: 1; }
