@@ -43,7 +43,14 @@ document.querySelectorAll(".btn-consultar").forEach(btn => {
         modalContent.innerHTML = `
             <li><strong>📍 Origen:</strong> ${origen}</li>
             <li><strong>🌿 Beneficios:</strong> ${beneficios}</li>
-            <li style="margin-top:15px; list-style:none;">✨ <em>Sanando desde la raíz</em></li>
+            <li style="margin-top:20px; list-style:none;">
+            <a href="https://wa.me/573222188846?text=Hola! Quiero más info del producto: ${nombre}"
+            target="_blank"
+            class="btn"
+            style="background:#25D366; display:block; text-align:center;">
+            Pedir este producto
+            </a>
+            </li>
         `;
 
         // Aplicamos el fondo traslúcido
