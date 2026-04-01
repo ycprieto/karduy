@@ -63,9 +63,12 @@ a { color: inherit; text-decoration: none; }
 .logo:hover { transform: translateY(-2px) scale(1.03); }
 
 .tagline {
-  margin-top: 15px;
-  font-size: 18px;
-  opacity: 0.9;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #ffffff; /* Un tono café oscuro orgánico */
+  border-left: 3px solid #d4af37; /* Una línea dorada sutil que evoca el polen/miel */
+  padding-left: 15px;
 }
 
 .nav {
@@ -121,9 +124,8 @@ a { color: inherit; text-decoration: none; }
 .about__text p {
   margin-bottom: 18px;
   font-size: 16px;
-  line-height: 1.8;
+  text-align: justify;
   color: #f1f1f1;
-  text-align: left; /* Por defecto a la izquierda para móviles */
 }
 
 .about__image-container img {
@@ -226,6 +228,8 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   background-repeat: no-repeat;
   transition: background-image 0.3s ease;
+  color: #1a1a1a;
+  text-shadow: 0 0 10px rgba(255,255,255,0.8); /* Ayuda a leer sobre fotos */
 }
 
 @keyframes modalIn {
@@ -322,18 +326,77 @@ a { color: inherit; text-decoration: none; }
     max-width: 1200px;
     margin: 0 auto;
   }
-
-  /* Nuevo: Solo en pantallas grandes el texto se justifica */
-  .about__text p {
-    text-align: justify;
-  }
 }
 
 @media (max-width: 991px) {
-  .about__content { margin: 0 10px; padding: 25px; }
-  .about__image-container { margin-top: 30px; }
+  .about__content { 
+    margin: 0 10px; 
+    padding: 25px; 
+  }
+  .about__image-container { 
+    margin-top: 30px; 
+    text-align: center;
+  }
+  .nav__menu {
+    gap: 15px; /* Menos espacio entre botones en celular */
+  }
 }
 
-/* 9. UTILIDADES JS */
+/* 9. UTILIDADES JS & SEO */
 .extra-product { display: none; opacity: 0; transition: 0.5s; }
 .extra-product.show { display: flex; opacity: 1; }
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+/* Ajuste para el botón de historia en móviles */
+@media (max-width: 991px) {
+  .about__content .btn-light {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Estilos para las fotos de los cuadros */
+    .highlight-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%; /* Fotos circulares */
+      margin-bottom: 15px;
+      border: 4px solid white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Estilo para la foto del local al final */
+    .shop-container {
+      margin-top: 40px;
+      text-align: center;
+    }
+    
+    .shop-image {
+      width: 100%;
+      max-width: 600px; /* Para que no sea gigante en PC */
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      margin-bottom: 20px;
+    }
+
+    .shop-caption {
+      font-size: 14px;
+      color: var(--verde);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }

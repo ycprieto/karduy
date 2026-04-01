@@ -2,8 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Karduy — Catálogo de Productos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karduy | Café y Cacao Artesanal Procesado en Guatavita</title>
+  <!-- Descripción que aparece en los resultados de Google -->
+   <meta name="description" content="Descubre el auténtico sabor de Karduy. Café artesanal de Acevedo Huila y Cacao puro de San Pablo de Borbur, Boyacá. Productos 100% naturales, miel y snacks saludables.">
+   <meta name="keywords" content="cacao artesanal, café especial, productos naturales Boyacá, café de Huila, miel orgánica, Karduy">
 
   <!-- Fuentes -->
   <link rel="icon" type="image/png" href="assets/img/karduy.png">
@@ -15,14 +18,12 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
+<h1 class="visually-hidden">Karduy: Café y Cacao de Origen, Transformado Artesanalmente en Guatavita</h1>
 <header class="header">
-  <!--<div class="container header__content">-->
   <div class="logo-badge clickable-contact">
   <img src="assets/img/logo.png" class="logo">
 </div>
-    <p class="tagline">Lleva a casa el aroma de nuestra tierra y el secreto de nuestras raíces.</p>
-  </div>
+    <p class="tagline">Productos naturales y artesanales</p>
 </header>
 
 <nav class="nav">
@@ -33,7 +34,7 @@
 </nav>
 
 <main>
-  <!-- SOBRE NOSOTROS-->
+<!-- SOBRE NOSOTROS (RESUMEN) -->
 <section id="about" class="about-bg-split">
   <div class="container">
     <div class="about__grid">
@@ -42,22 +43,20 @@
         <h2>Nuestra Historia</h2>
         <div class="about__text">
           <p>
-            <strong>KARDUY</strong> nace del amor por la tierra, la tradición familiar y la convicción de que la verdadera sanación es natural. Nuestro lema, <strong>“Sanando desde la raíz”</strong>, es el corazón de todo lo que hacemos: un compromiso con el bienestar integral a través de tesoros que la naturaleza nos brinda.
+            Karduy nace en la finca de nuestros abuelos en San Pablo de Borbur, Boyacá, donde cultivamos con respeto nuestro producto insignia: el Cacao.
           </p>
           <p>
-            Nuestra historia tiene un aroma especial a <strong>Cacao</strong>, nuestro producto insignia. Este tesoro se cultiva con respeto y tradición en el municipio de <strong>San Pablo de Borbur, Boyacá</strong>, directamente en la finca de nuestros abuelos. Es allí donde nuestras raíces cobran vida, transformando la herencia familiar en un propósito que llega a tu mesa.
+            Hoy, desde Guatavita, honramos esa herencia familiar ofreciendo lo mejor de nuestra tierra: café de Acevedo, miel, polen y una línea artesanal pensado en tu bienestar. Somos tradición que sana, transformando raíces en un propósito de bienestar natural para tu mesa.
           </p>
-          <p>
-            Complementamos nuestra oferta con lo mejor de nuestra geografía: <strong>café 100% colombiano</strong> de Acevedo, Huila, y productos llenos de energía vital como el <strong>polen, la miel y el maní</strong> de tierras boyacenses. Además, extendemos nuestro cuidado al hogar con nuestra línea artesanal de <strong>velas y jabones</strong>.
-          </p>
-          <p>
-            Desde <strong>Guatavita</strong>, transformamos y empacamos cada producto cuidando cada detalle para conservar sus propiedades naturales. En KARDUY, compartimos una expresión de respeto por la naturaleza y un compromiso con una vida más consciente.
-          </p>
+          <!-- BOTÓN PARA IR A LA NUEVA PÁGINA -->
+          <div style="margin-top: 25px;">
+            <a href="historia.html" class="btn btn-light">Conocer nuestra historia completa</a>
+          </div>
         </div>
       </div>
 
       <div class="about__image-container">
-        <img src="assets/img/productos.png" alt="Productos Karduy">
+        <img src="assets/img/productos.png" alt="Productos Karduy Artesanales">
       </div>
 
     </div>
@@ -69,7 +68,7 @@
     <h2 class="section__title">Nuestros Productos</h2>
     <div class="products-grid" id="gridProductos">
       <article class="card">
-        <img src="assets/img/cacao.jpeg" alt="Cacao">
+        <img src="assets/img/cacao.jpeg" alt="Cacao artesanal de San Pablo de Borbur Boyacá - Karduy" loading="lazy">
         <div class="card__body">
           <span class="badge">Cacao</span>
           <h3>Cacao Artesanal</h3>
@@ -77,13 +76,13 @@
           <button class="btn btn-consultar" 
             data-producto="Cacao Artesanal" 
             data-origen="Finca de nuestros abuelos en San Pablo de Borbur, Boyacá."
-            data-beneficios="Siéntete con energía natural sin los químicos de los productos industriales, mejora el estado de ánimo y aporta energía saludable.">
+            data-beneficios="Rico en antioxidantes, mejora el estado de ánimo y aporta energía saludable.">
             Conocer más
           </button>
         </div>
       </article>
       <article class="card">
-        <img src="assets/img/cafe.png" alt="Café">
+        <img src="assets/img/cafe.png" alt="Café artesanal 100% colombiano de Acevedo Huila - Karduy" loading="lazy">
         <div class="card__body">
           <span class="badge">Café</span>
           <h3>Café 100% Colombiano</h3>
@@ -98,7 +97,7 @@
       </article>
 
       <article class="card">
-        <img src="assets/img/miel.png" alt="Miel">
+        <img src="assets/img/miel.png" alt="Miel Natural Boyacá - Karduy" loading="lazy">
         <div class="card__body">
           <span class="badge">Miel</span>
           <h3>Miel Natural</h3>
@@ -113,7 +112,7 @@
       </article>
 
       <article class="card extra-product">
-        <img src="assets/img/polen.png" alt="Polen">
+        <img src="assets/img/polen.png" alt="Polen Natural Boyacá - Karduy" loading="lazy">
         <div class="card__body">
           <span class="badge">Súper Alimento</span>
           <h3>Polen Natural</h3>
@@ -128,7 +127,7 @@
       </article>
 
       <article class="card extra-product">
-        <img src="assets/img/jabones.png" alt="Jabones">
+        <img src="assets/img/jabones.png" alt="Jabones Artesanales Boyacá - Karduy" loading="lazy">
         <div class="card__body">
           <span class="badge">Cuidado Corporal</span>
           <h3>Jabones Artesanales</h3>
@@ -143,7 +142,7 @@
       </article>
 
       <article class="card extra-product">
-        <img src="assets/img/mani.png" alt="Maní">
+        <img src="assets/img/mani.png" alt="Maní Natural Boyacá - Karduy" loading="lazy">
         <div class="card__body">
           <span class="badge">Snack Saludable</span>
           <h3>Maní Natural</h3>
@@ -158,7 +157,7 @@
       </article>
 
       <article class="card extra-product">
-        <img src="assets/img/velas.png" alt="Velas">
+        <img src="assets/img/velas.png" alt="Velas Artesanales Boyacá - Karduy" loading="lazy">
         <div class="card__body">
           <span class="badge">Ambiente</span>
           <h3>Velas Artesanales</h3>
@@ -218,7 +217,7 @@
     <div class="modal__actions">
       <a href="https://wa.me/573222188846" target="_blank" class="btn btn-outline">WhatsApp</a>
       <a href="https://instagram.com/Karduy.coffe" target="_blank" class="btn btn-outline">Instagram</a>
-      <a href="mailto:karduy.coffee@gmail.com" class="btn btn-outline">Correo</a>
+      <a href="mailto:contacto@karduy.com" class="btn btn-outline">Correo</a>
     </div>
   </div>
 </div>
@@ -229,7 +228,52 @@
     <P>GUATAVITA-COLOMBIA</P>
   </div>
 </footer>
-
 <script src="assets/js/app.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LocalBusiness",
+  "name": "Karduy",
+  "image": "https://karduy.com/assets/img/logo.png",
+  "description": "Café artesanal de origen (Huila) y Cacao puro (Boyacá). Productos 100% naturales procesados en Guatavita.",
+  "url": "https://karduy.com/",
+  "telephone": "+573222188846",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Guatavita",
+    "addressLocality": "Guatavita",
+    "addressRegion": "Cundinamarca",
+    "addressCountry": "CO"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Catálogo de Productos Naturales",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cacao Artesanal de Boyacá"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Café Especial de Acevedo Huila"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Miel y Polen Natural"
+        }
+      }
+    ]
+  }
+}
+</script>
 </body>
 </html>
